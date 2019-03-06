@@ -1,0 +1,131 @@
+setup|mary|Female('mary')
+mary.set_by_pos(3, 5, 'AT')|'set_by_pos should not be returning anything'|None
+mary.get_by_pos(3, 5)|'get_by_pos should be returning str of nucleotide pair 5 from chromosome 3'|'AT'
+
+mary.set_by_pos(0, 1, 'AT')|'set_by_pos should work on chromosome 1'|None
+mary.get_by_pos(0, 1)|'get_by_pos should be returning str of nucleotide pair 1 from chromosome 1'|'AT'
+
+mary.set_by_pos(22, 5, 'GC')|'set_by_pos should work on chromosome 23'|None
+mary.get_by_pos(22, 5)|'get_by_pos should be returning str of nucleotide pair from chromosome 23'|'GC'
+
+
+mary.set_marker('A', 0, 1)|'set_marker should be returning None on chromosome 1'|None
+mary.set_by_marker('A', 'CT')|'set_by_marker should be changing the nucleotide pair at chromosome 1 position 1 and return None'|None
+mary.get_by_marker('A')|'get_by_marker should be changing the nucleotide pair at chromosome 1 position 1 and return CT'|'CT'
+
+mary.set_marker('B', 22, 5)|'set_marker should be returning None on chromosome 23'|None
+mary.set_by_marker('B', 'TC')|'set_by_marker should be changing the nucleotide pair at chromosome 23 position 5 and return None'|None
+mary.get_by_marker('B')|'get_by_marker should be changing the nucleotide pair at chromosome 23 position 5 and return TC '|'TC'
+
+mary.set_marker('C', 3, 5)|'set_marker should be returning None on chromosome 3'|None
+
+mary.set_by_marker('C', 'TC')|'set_by_marker should be changing the nucleotide pair at chromosome 3 position 5 and return None'|None
+mary.get_by_marker('C')|'get_by_marker should be changing the nucleotide pair at chromosome 3 position 5 and return TC'|'TC'
+
+mary.get_chromosome(3).__class__.__name__|"Check correct return type general chromosome"|"Chromosome"
+mary.get_chromosome(0).__class__.__name__|"Check correct return type min chromosome"|"Chromosome"
+mary.get_chromosome(22).__class__.__name__|"Check correct return type max chromosome"|"Chromosome"
+
+
+setup|gary|Male('gary')
+gary.set_by_pos(3, 5, 'AT')|'set_by_pos should not be returning anything'|None
+gary.get_by_pos(3, 5)|'get_by_pos should be returning str of nucleotide pair 5 from chromosome 3'|'AT'
+
+gary.set_by_pos(0, 1, 'AT')|'set_by_pos should work on chromosome 1'|None
+gary.get_by_pos(0, 1)|'get_by_pos should be returning str of nucleotide pair 1 from chromosome 1'|'AT'
+
+gary.set_by_pos(22, 5, 'GC')|'set_by_pos should work on chromosome 23'|None
+gary.get_by_pos(22, 5)|'get_by_pos should be returning str of nucleotide pair from chromosome 23'|'GC'
+
+
+
+gary.set_marker('A', 0, 1)|'set_marker should be returning None on chromosome 1'|None
+gary.set_by_marker('A', 'TC')|'set_by_marker should be changing the nucleotide pair at chromosome 1 position 1 and return None'|None
+gary.get_by_marker('A')|'get_by_marker should be changing the nucleotide pair at chromosome 1 position 1 and return TC'|'TC'
+
+gary.set_marker('B', 22, 5)|'set_marker should be returning None on chromosome 23'|None
+gary.set_by_marker('B', 'TC')|'set_by_marker should be changing the nucleotide pair at chromosome 23 position 5 and return None'|None
+gary.get_by_marker('B')|'get_by_marker should be changing the nucleotide pair at chromosome 23 position 5 and return TC'|'TC'
+
+gary.set_marker('C', 3, 5)|'set_marker should be returning None on chromosome 3'|None
+
+gary.set_by_marker('C', 'TC')|'set_by_marker should be changing the nucleotide pair at chromosome 3 position 5 and return None'|None
+gary.get_by_marker('C')|'get_by_marker should be changing the nucleotide pair at chromosome 3 position 5 and return TC'|'TC'
+
+gary.get_chromosome(3).__class__.__name__|"Check correct return type general chromosome"|"Chromosome"
+gary.get_chromosome(0).__class__.__name__|"Check correct return type min chromosome"|"Chromosome"
+gary.get_chromosome(22).__class__.__name__|"Check correct return type max chromosome"|"Chromosome"
+
+
+setup|query|Query()
+query.set_by_pos(3, 5, 'AT')|'set_by_pos should not be returning anything'|None
+query.get_by_pos(3, 5)|'get_by_pos should be returning str of nucleotide pair 5 from chromosome 3'|'AT'
+
+query.set_by_pos(0, 1, 'AT')|'set_by_pos should work on chromosome 1'|None
+query.get_by_pos(0, 1)|'get_by_pos should be returning str of nucleotide pair 1 from chromosome 1'|'AT'
+
+query.set_by_pos(22, 5, 'GC')|'set_by_pos should work on chromosome 23'|None
+query.get_by_pos(22, 5)|'get_by_pos should be returning str of nucleotide pair from chromosome 23'|'GC'
+
+query.set_marker('A', 0, 1)|'set_marker should be returning None on chromosome 1'|None
+query.set_by_marker('A', 'CT')|'set_by_marker should be changing the nucleotide pair at chromosome 1 position 1 and return None'|None
+query.get_by_marker('A')|'get_by_marker should be changing the nucleotide pair at chromosome 1 position 1 and return CT'|'CT'
+
+query.set_marker('B', 22, 5)|'set_marker should be returning None on chromosome 23'|None
+query.set_by_marker('B', 'TC')|'set_by_marker should be changing the nucleotide pair at chromosome 23 position 5 and return None'|None
+query.get_by_marker('B')|'get_by_marker should be changing the nucleotide pair at chromosome 23 position 5 and return TC '|'TC'
+
+query.set_marker('C', 3, 5)|'set_marker should be returning None on chromosome 3'|None
+
+query.set_by_marker('C', 'TC')|'set_by_marker should be changing the nucleotide pair at chromosome 3 position 5 and return None'|None
+query.get_by_marker('C')|'get_by_marker should be changing the nucleotide pair at chromosome 3 position 5 and return TC'|'TC'
+
+query.get_chromosome(3).__class__.__name__|"Check correct return type general chromosome"|"Chromosome"
+query.get_chromosome(0).__class__.__name__|"Check correct return type min chromosome"|"Chromosome"
+query.get_chromosome(22).__class__.__name__|"Check correct return type max chromosome"|"Chromosome"
+
+mary.test(query)|"No empty nucleotide, no memory nucleotide"|True
+
+query.set_by_marker('C', '1C')|"set up query for test"|None
+mary.test(query)|"No empty nucleotide, 1 memory nucleotide"|True
+
+query.set_by_marker('C', '19')|"set up query for test"|None
+mary.test(query)|"No empty nucleotide, 2 memory nucleotide"|True
+
+query.set_by_pos(2, 3, 'AC')|"set up query for test"|None
+mary.test(query)|"1 empty nucleotide, 0 memory nucleotide"|True
+
+query.set_marker('U', 22, 8)|"set query on empty nucleotide on chromosome 23"|None
+query.set_by_marker('U', 'AC')|"set up query for test"|None
+mary.test(query)|"Female should return true when its 23rd chromosome has an empty corresponding nucleotide"|True
+
+query.set_by_pos(0, 1, "TC")|"set query to match gary"|None
+query.set_marker('U', 22, 8)|"set query on empty nucleotide on chromosome 23"|None
+query.set_by_marker('U', 'AC')|"set up query for test"|None
+gary.test(query)|"male should return false when its 23rd chromosome has an empty corresponding nucleotide"|False
+
+gary.set_marker('U', 22, 8)|"set query on empty nucleotide on chromosome 23"|None
+gary.set_by_marker('U', 'AC')|"set up query for test"|None
+gary.test(query)|"male should return true when its 23rd chromosome has a corresponding nucleotide"|True
+
+
+query.set_by_marker('C', '11')|"set up query for test"|None
+gary.test(query)|"conflicting memory nucleotide values"|False
+
+setup|binder|Binder()
+setup|binder2|Binder()
+binder.set_sex('F')|"prepare binder for tests"|None
+binder2.set_sex('F')|"prepare binder for tests"|None
+binder.set_by_pos(0, 1, "LM")|"prep binder for tests"|None
+
+setup|dad|Male("asdasdasd")
+dad.set_by_pos(0, 1, "AT")|"set up dad"|None
+
+setup|mom|Female("ASDASasdasdqwqww")
+mom.set_by_pos(0, 1, "GC")|"set up mom"|None
+
+setup|child1|mom.procreate(dad, binder)
+child.get_by_pos(0, 1)|"Check if left maternal works"|'GT'
+binder2.set_by_pos(0, 1, "RM")|"prep binder2 for tests"|None
+setup|child2|mom.procreate(dad, binder2)
+child2.get_by_pos(0, 1)|"Check if right maternal works"|'AC'
